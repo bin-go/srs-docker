@@ -29,7 +29,8 @@ RUN cd /tmp; \
     cd srs-${SRS_VERSION}/trunk; \
     ./configure --prefix=${SRS_BUILD_PATH} ${SRS_CONFIGURE_ARGS}; \
     make; \
-    make install;
+    make install; \
+    cp -HR objs/ffmpeg ${SRS_BUILD_PATH}/objs/;
 
 COPY ./srs.conf /srs/conf/docker.conf
 
