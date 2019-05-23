@@ -1,0 +1,13 @@
+version: '2'
+services:
+  srs:
+    image: binarygo/srs:2.0-r6
+    environment:
+      - TZ:"Asia/Shanghai"
+    ports:
+      - "1935:1935"
+      - "1985:1985"
+      - "8080:8080"
+    volumes:
+      - ./logs:/srs/logs
+      - ./conf/srs.conf:/srs/conf/docker.conf
