@@ -34,7 +34,7 @@ RUN cd /tmp; \
 
 COPY ./srs.conf /srs/conf/docker.conf
 
-FROM debian:stretch-slim
+FROM gcc:5.5
 
 ARG SRS_VERSION
 ARG SRS_BUILD_PATH
